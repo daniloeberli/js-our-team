@@ -38,13 +38,8 @@ const teamList = [
     }
 ]
 
+for(let i = 0; i < teamList.length; i++){
 
-    // for(let key in teamList){
-    //     console.log(`${key}: ${teamList[key]}`);
-    // }
-
-    for(let i = 0; i < teamList.length; i++){
-
-        console.log(`Nome: ${teamList[i].nome}`,`Ruolo: ${teamList[i].ruolo}`,` Foto: ${teamList[i].foto}`);
-        //console.log(teamList[i]);
-    }
+    console.log(`Nome: ${teamList[i].nome}`,`Ruolo: ${teamList[i].ruolo}`,` Foto: ${teamList[i].foto}`);
+    //console.log(teamList[i]);
+}
