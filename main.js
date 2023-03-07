@@ -38,8 +38,14 @@ const teamList = [
     }
 ]
 
-for(let i = 0; i < teamList.length; i++){
+const ul = document.getElementById('u-list');
 
-    console.log(`Nome: ${teamList[i].nome}`,`Ruolo: ${teamList[i].ruolo}`,` Foto: ${teamList[i].foto}`);
+for(let i = 0; i < teamList.length; i++){
+    
+    const listItem = document.createElement('li'); 
+    listItem.append(`Nome: ${teamList[i].nome}`,` Ruolo: ${teamList[i].ruolo}`,` Foto: ${teamList[i].foto}`);
+    ul.append(listItem);
+
+    console.log(`Nome: ${teamList[i].nome}`,` Ruolo: ${teamList[i].ruolo}`,` Foto: ${teamList[i].foto}`);
     //console.log(teamList[i]);
 }
