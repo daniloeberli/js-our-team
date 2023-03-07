@@ -40,12 +40,28 @@ const teamList = [
 
 const ul = document.getElementById('u-list');
 
-for(let i = 0; i < teamList.length; i++){
-    
-    const listItem = document.createElement('li'); 
-    listItem.append(`Nome: ${teamList[i].nome}`,` Ruolo: ${teamList[i].ruolo}`,` Foto: ${teamList[i].foto}`);
-    ul.append(listItem);
+//SOLUZIONE 1
 
-    console.log(`Nome: ${teamList[i].nome}`,` Ruolo: ${teamList[i].ruolo}`,` Foto: ${teamList[i].foto}`);
-    //console.log(teamList[i]);
+// for(let i = 0; i < teamList.length; i++){
+    
+//     const listItem = document.createElement('li'); 
+//     listItem.append(`Nome: ${teamList[i].nome}`,` Ruolo: ${teamList[i].ruolo}`,` Foto: ${teamList[i].foto}`);
+//     ul.append(listItem);
+
+//     console.log(`Nome: ${teamList[i].nome}`,` Ruolo: ${teamList[i].ruolo}`,` Foto: ${teamList[i].foto}`);
+//     //console.log(teamList[i]);
+// }
+
+//SOLUZIONE 2
+
+for (let i = 0; i < teamList.length; i++){
+
+    const listItem = document.createElement('li');
+    let currentTeamMember = teamList[i];
+    console.log(currentTeamMember);
+    for (let key in currentTeamMember){
+        listItem.append(key + ": " + currentTeamMember[key] + ' ');
+        ul.append(listItem);
+        console.log(key + ": " + currentTeamMember[key])
+    }
 }
